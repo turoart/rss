@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Desarrollos inform&#xE1;ticos</title>
+    <description>Ya me cans&#xE9; de estar pasando links por el chat</description>
+    <link>http://pulsatrix.inbio.ac.cr/rss.xml</link>
+
+    <item>
+      <title>Incluir links en este feed</title>
+      <description>Este es el formulario para incluir links en el link de la unidad</description>
+      <link>http://pulsatrix.inbio.ac.cr/rss/</link>
+    </item>
+
+    <item><title>asdfasdf</title><description/><url>asdfasdf</url></item><item><title>asdfasdf</title><description/><url>asdfasdf</url></item><item><title>santos cachiflines batman</title><description/><url>santos cachiflines batman</url></item><item><title>santos cachiflines batman</title><description/><url>santos cachiflines batman</url></item><item><title>santos cachiflines batman</title><description/><url>santos cachiflines batman</url></item><item><title>santos cachiflines batman</title><description>Posted by asanabria</description><url>santos cachiflines batman</url></item></channel>
+</rss>
