@@ -38,12 +38,10 @@
         }
       }
 
-      var_dump($description);
 
       if(! empty($_POST['description'])){
         $description = $description . '-> {'.$_POST['description'].'}'; 
       }
-      var_dump($description);
 
         /* write the rss.xml file */
         // Get SimpleXMLElement object from an XML document
