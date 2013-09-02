@@ -56,7 +56,11 @@
         $item->addChild('description', $description);
         $item->addChild('url', $url);
 
-        file_put_contents('rss.xml', $rss_xml->asXML());
+        $dom = new DOMDocument;
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($rss_xml->asXML());
+        file_put_contents("rss.xml", $dom->saveXML());
 
         echo "Listo... <br /><h1>&iexcl;Cuidado con los dragones&#33;</h1>";
     ?>
