@@ -36,6 +36,9 @@
           echo "Ese c&oacute;digo no... malo malo.";
           return;
         }
+      } else{
+        echo "Ese c&oacute;digo no... malo malo.";
+        return;
       }
 
 
