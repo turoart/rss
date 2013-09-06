@@ -46,23 +46,10 @@
         $description = $description . '-> {'.$_POST['description'].'}'; 
       }
 
-        /* write the rss.xml file */
-        // Get SimpleXMLElement object from an XML document
-        $rss_xml = simplexml_load_file("rss.xml");
+      // write to rss.xml a new item
+      add_item_to_xml($title, $description, $url);
 
-        $item = $rss_xml->channel->addChild('item');
-
-        $item->addChild('title',  $title);
-        $item->addChild('description', $description);
-        $item->addChild('url', $url);
-
-        $dom = new DOMDocument;
-        $dom->preserveWhiteSpace = false;
-        $dom->formatOutput = true;
-        $dom->loadXML($rss_xml->asXML());
-        file_put_contents("rss.xml", $dom->saveXML());
-
-        echo "Listo... <br /><h1>&iexcl;Cuidado con los dragones&#33;</h1>";
+      echo "Listo... <br /><h1>&iexcl;Cuidado con los dragones&#33;</h1>";
     ?>
 
     <br />
