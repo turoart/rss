@@ -4,7 +4,7 @@
   </head>
   <body>
 
-    <form method="post" action="write.php">
+    <form method="post" action="process.php">
       <label for="code">C&oacute;digo</label>
       <input type="password" name="code" id="code" required />
       <br />
