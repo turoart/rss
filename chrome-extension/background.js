@@ -10,7 +10,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   }
 
   var xhr = new XMLHttpRequest();
-  var url = "http://pulsatrix.inbio.ac.cr/rss/write.php";
+  var url = "http://pulsatrix.inbio.ac.cr/rss/process.php";
   
   var params = "title=" + tab.title;
   params += "&url=" + tab.url;
