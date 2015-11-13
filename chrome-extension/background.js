@@ -16,6 +16,8 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   params += "&url=" + tab.url;
   params += "&code=" + code;
 
+  var description = getDesc(tab);
+
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
@@ -27,4 +29,22 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   }
   xhr.send(params);
 
+});
+
+// get the meta description of a page
+function getDesc(document){
+  var metas = document.getElementsByTagName('meta');
+  for(var i=0;i<metas.lenght;i++){
+    if(metas[i].getAttribute('name').toLowerCase() == 'description'){
+      return metas[i].getAttribute('content');
+    }
+  }
+  return null;//or empty string if you prefer
+}
+
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+  if(request.action == 'getDescription')
+    sendResponse({description: getDesc(document)});
+  else
+    sendResponse({});
 });
